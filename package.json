@@ -17,8 +17,19 @@
     "node": ">=0.6.0"
   },
   "chix": {
-    "components": {
-    }
+    "dependencies": [ "dns" ]
+    "components": [
+      "lookup",
+      "resolve",
+      "resolve4",
+      "resolve6",
+      "resolveCname",
+      "resolveMx",
+      "resolveNs",
+      "resolveSrv",
+      "resolveTxt",
+      "reverse"
+    ]
   },
   "scripts": {
   }
