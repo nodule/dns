@@ -17,7 +17,7 @@
     "node": ">=0.6.0"
   },
   "chix": {
-    "dependencies": [ "dns" ]
+    "dependencies": [ "dns" ],
     "components": [
       "lookup",
       "resolve",
