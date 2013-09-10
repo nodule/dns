@@ -1,0 +1,19 @@
+{
+  "name": "dns.resolveCname",
+  "description": "dns resolveCname",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

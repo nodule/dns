@@ -1,0 +1,19 @@
+{
+  "name": "dns.resolveMx",
+  "description": "dns resolveMx",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

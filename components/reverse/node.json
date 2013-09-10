@@ -1,0 +1,19 @@
+{
+  "name": "dns.reverse",
+  "description": "dns reverse",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "ip": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

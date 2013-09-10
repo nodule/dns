@@ -1,0 +1,22 @@
+{
+  "name": "dns.resolve",
+  "description": "dns resolve",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      },
+      "rrtype": {
+        "enum": [ "A", "AAAA", "MX", "TXT", "SRV", "PTR", "NS", "CNAME" ]
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

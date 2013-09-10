@@ -1,2 +1,2 @@
-chix-dns
-========
+Chiχ DNS Components
+===================

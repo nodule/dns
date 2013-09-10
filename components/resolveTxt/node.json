@@ -1,0 +1,19 @@
+{
+  "name": "dns.resolveTxt",
+  "description": "dns resolveTxt",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

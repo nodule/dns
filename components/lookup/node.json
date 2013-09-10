@@ -1,0 +1,22 @@
+{
+  "name": "dns.lookup",
+  "description": "dns lookup",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      },
+      "family": {
+        "type": "integer"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

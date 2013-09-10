@@ -1,0 +1,19 @@
+{
+  "name": "dns.resolve4",
+  "description": "dns resolve4",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

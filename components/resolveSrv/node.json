@@ -1,0 +1,19 @@
+{
+  "name": "dns.resolveSrv",
+  "description": "dns resolveSrv",
+  "dependencies": {
+    "dns": "latest"
+  },
+  "ports": {
+    "input": {
+      "domain": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}
