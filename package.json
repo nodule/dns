@@ -16,6 +16,7 @@
   "engines": {
     "node": ">=0.6.0"
   },
+  "main": "nodes",
   "chix": {
     "dependencies": [ "dns" ],
     "components": [
