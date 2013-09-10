@@ -17,7 +17,6 @@
     "node": ">=0.6.0"
   },
   "chix": {
-    "type": "provider",
     "dependencies": [ "dns" ]
     "components": [
       "lookup",
