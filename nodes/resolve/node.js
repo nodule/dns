@@ -1,1 +1,1 @@
-output([dns.resolve, input.domain, input.rrtype])
+output = [dns.resolve, input.domain, input.rrtype]

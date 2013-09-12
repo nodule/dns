@@ -1,1 +1,1 @@
-output([dns.resolveCname, input.domain])
+output = [dns.resolveCname, input.domain]

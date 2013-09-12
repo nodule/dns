@@ -1,1 +1,1 @@
-output([dns.resolveMx, input.domain])
+output = [dns.resolveMx, input.domain]

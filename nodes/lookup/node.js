@@ -1,1 +1,1 @@
-output([dns.lookup, input.domain, input.family])
+output = [dns.lookup, input.domain, input.family]

@@ -1,1 +1,1 @@
-output([dns.resolveSrv, input.domain])
+output = [dns.resolveSrv, input.domain]

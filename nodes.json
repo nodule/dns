@@ -1,6 +1,6 @@
 {
   "dns.lookup": {
-    "fn": "output([dns.lookup, input.domain, input.family])",
+    "fn": "output = [dns.lookup, input.domain, input.family]\n",
     "ports": {
       "input": {
         "domain": {
@@ -23,7 +23,7 @@
     "name": "dns.lookup"
   },
   "dns.resolve": {
-    "fn": "output([dns.resolve, input.domain, input.rrtype])",
+    "fn": "output = [dns.resolve, input.domain, input.rrtype]\n",
     "ports": {
       "input": {
         "domain": {
@@ -55,7 +55,7 @@
     "name": "dns.resolve"
   },
   "dns.resolve4": {
-    "fn": "output([dns.resolve4, input.domain])",
+    "fn": "output = [dns.resolve4, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -75,7 +75,7 @@
     "name": "dns.resolve4"
   },
   "dns.resolve6": {
-    "fn": "output([dns.resolve6, input.domain])",
+    "fn": "output = [dns.resolve6, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -95,7 +95,7 @@
     "name": "dns.resolve6"
   },
   "dns.resolveCname": {
-    "fn": "output([dns.resolveCname, input.domain])",
+    "fn": "output = [dns.resolveCname, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -115,7 +115,7 @@
     "name": "dns.resolveCname"
   },
   "dns.resolveMx": {
-    "fn": "output([dns.resolveMx, input.domain])",
+    "fn": "output = [dns.resolveMx, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -135,7 +135,7 @@
     "name": "dns.resolveMx"
   },
   "dns.resolveNs": {
-    "fn": "output([dns.resolveNs, input.domain])",
+    "fn": "output = [dns.resolveNs, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -155,7 +155,7 @@
     "name": "dns.resolveNs"
   },
   "dns.resolveSrv": {
-    "fn": "output([dns.resolveSrv, input.domain])",
+    "fn": "output = [dns.resolveSrv, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -175,7 +175,7 @@
     "name": "dns.resolveSrv"
   },
   "dns.resolveTxt": {
-    "fn": "output([dns.resolveTxt, input.domain])",
+    "fn": "output = [dns.resolveTxt, input.domain]\n",
     "ports": {
       "input": {
         "domain": {
@@ -195,7 +195,7 @@
     "name": "dns.resolveTxt"
   },
   "dns.reverse": {
-    "fn": "output([dns.reverse, input.ip])",
+    "fn": "output = [dns.reverse, input.ip]\n",
     "ports": {
       "input": {
         "ip": {
