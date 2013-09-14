@@ -1,1 +1,1 @@
-output = [dns.resolve6, input.domain]
+output = [dns, 'resolve6', input.domain]

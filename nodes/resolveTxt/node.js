@@ -1,1 +1,1 @@
-output = [dns.resolveTxt, input.domain]
+output = [dns, 'resolveTxt', input.domain]
