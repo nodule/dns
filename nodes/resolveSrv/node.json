@@ -1,5 +1,5 @@
 {
-  "name": "dns.resolveSrv",
+  "name": "resolveSrv",
   "description": "dns resolveSrv",
   "dependencies": {
     "dns": "latest"

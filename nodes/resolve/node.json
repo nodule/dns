@@ -1,5 +1,5 @@
 {
-  "name": "dns.resolve",
+  "name": "resolve",
   "description": "dns resolve",
   "dependencies": {
     "dns": "latest"

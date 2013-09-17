@@ -1,5 +1,5 @@
 {
-  "name": "dns.resolveNs",
+  "name": "resolveNs",
   "description": "dns resolveNs",
   "dependencies": {
     "dns": "latest"

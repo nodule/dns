@@ -1,5 +1,5 @@
 {
-  "name": "dns.lookup",
+  "name": "lookup",
   "description": "dns lookup",
   "dependencies": {
     "dns": "latest"

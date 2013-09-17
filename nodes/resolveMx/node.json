@@ -1,5 +1,5 @@
 {
-  "name": "dns.resolveMx",
+  "name": "resolveMx",
   "description": "dns resolveMx",
   "dependencies": {
     "dns": "latest"

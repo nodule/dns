@@ -1,5 +1,5 @@
 {
-  "name": "dns.resolve6",
+  "name": "resolve6",
   "description": "dns resolve6",
   "dependencies": {
     "dns": "latest"

@@ -1,5 +1,5 @@
 {
-  "dns.lookup": {
+  "lookup": {
     "fn": "output = [dns, 'lookup', input.domain, input.family]\n",
     "ports": {
       "input": {
@@ -20,9 +20,9 @@
       "dns": "latest"
     },
     "description": "dns lookup",
-    "name": "dns.lookup"
+    "name": "lookup"
   },
-  "dns.resolve": {
+  "resolve": {
     "fn": "output = [dns, 'resolve', input.domain, input.rrtype]\n",
     "ports": {
       "input": {
@@ -52,9 +52,9 @@
       "dns": "latest"
     },
     "description": "dns resolve",
-    "name": "dns.resolve"
+    "name": "resolve"
   },
-  "dns.resolve4": {
+  "resolve4": {
     "fn": "output = [dns, 'resolve4', input.domain]\n",
     "ports": {
       "input": {
@@ -72,9 +72,9 @@
       "dns": "latest"
     },
     "description": "dns resolve4",
-    "name": "dns.resolve4"
+    "name": "resolve4"
   },
-  "dns.resolve6": {
+  "resolve6": {
     "fn": "output = [dns, 'resolve6', input.domain]\n",
     "ports": {
       "input": {
@@ -92,9 +92,9 @@
       "dns": "latest"
     },
     "description": "dns resolve6",
-    "name": "dns.resolve6"
+    "name": "resolve6"
   },
-  "dns.resolveCname": {
+  "resolveCname": {
     "fn": "output = [dns, 'resolveCname', input.domain]\n",
     "ports": {
       "input": {
@@ -112,9 +112,9 @@
       "dns": "latest"
     },
     "description": "dns resolveCname",
-    "name": "dns.resolveCname"
+    "name": "resolveCname"
   },
-  "dns.resolveMx": {
+  "resolveMx": {
     "fn": "output = [dns, 'resolveMx', input.domain]\n",
     "ports": {
       "input": {
@@ -132,9 +132,9 @@
       "dns": "latest"
     },
     "description": "dns resolveMx",
-    "name": "dns.resolveMx"
+    "name": "resolveMx"
   },
-  "dns.resolveNs": {
+  "resolveNs": {
     "fn": "output = [dns, 'resolveNs', input.domain]\n",
     "ports": {
       "input": {
@@ -152,9 +152,9 @@
       "dns": "latest"
     },
     "description": "dns resolveNs",
-    "name": "dns.resolveNs"
+    "name": "resolveNs"
   },
-  "dns.resolveSrv": {
+  "resolveSrv": {
     "fn": "output = [dns, 'resolveSrv', input.domain]\n",
     "ports": {
       "input": {
@@ -172,9 +172,9 @@
       "dns": "latest"
     },
     "description": "dns resolveSrv",
-    "name": "dns.resolveSrv"
+    "name": "resolveSrv"
   },
-  "dns.resolveTxt": {
+  "resolveTxt": {
     "fn": "output = [dns, 'resolveTxt', input.domain]\n",
     "ports": {
       "input": {
@@ -192,9 +192,9 @@
       "dns": "latest"
     },
     "description": "dns resolveTxt",
-    "name": "dns.resolveTxt"
+    "name": "resolveTxt"
   },
-  "dns.reverse": {
+  "reverse": {
     "fn": "output = [dns, 'reverse', input.ip]\n",
     "ports": {
       "input": {
@@ -212,6 +212,6 @@
       "dns": "latest"
     },
     "description": "dns reverse",
-    "name": "dns.reverse"
+    "name": "reverse"
   }
 }

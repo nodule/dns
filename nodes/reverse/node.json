@@ -1,5 +1,5 @@
 {
-  "name": "dns.reverse",
+  "name": "reverse",
   "description": "dns reverse",
   "dependencies": {
     "dns": "latest"

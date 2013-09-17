@@ -1,5 +1,5 @@
 {
-  "name": "dns.resolveTxt",
+  "name": "resolveTxt",
   "description": "dns resolveTxt",
   "dependencies": {
     "dns": "latest"
