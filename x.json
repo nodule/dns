@@ -229,7 +229,5 @@
       "ns": "dns"
     }
   ],
-  "twigs": {
-    "ns": "dns"
-  }
+  "twigs": []
 }
