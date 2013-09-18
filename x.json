@@ -12,10 +12,13 @@
     "type": "git",
     "url": "https://github.com/psichi/chix-dns.git"
   },
-  "nodes": {
-    "lookup": {
-      "fn": "output = [dns, 'lookup', input.domain, input.family]\n",
-      "ns": "dns",
+  "nodes": [
+    {
+      "name": "lookup",
+      "description": "dns lookup",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -31,15 +34,14 @@
           }
         }
       },
+      "ns": "dns"
+    },
+    {
+      "name": "resolve",
+      "description": "dns resolve",
       "dependencies": {
         "dns": "latest"
       },
-      "description": "dns lookup",
-      "name": "lookup"
-    },
-    "resolve": {
-      "fn": "output = [dns, 'resolve', input.domain, input.rrtype]\n",
-      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -64,36 +66,14 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
-      "description": "dns resolve",
-      "name": "resolve"
+      "ns": "dns"
     },
-    "resolve4": {
-      "fn": "output = [dns, 'resolve4', input.domain]\n",
-      "ns": "dns",
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "results": {
-            "type": "object"
-          }
-        }
-      },
-      "dependencies": {
-        "dns": "latest"
-      },
+    {
+      "name": "resolve4",
       "description": "dns resolve4",
-      "name": "resolve4"
-    },
-    "resolve6": {
-      "fn": "output = [dns, 'resolve6', input.domain]\n",
-      "ns": "dns",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -106,15 +86,14 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
+      "ns": "dns"
+    },
+    {
+      "name": "resolve6",
       "description": "dns resolve6",
-      "name": "resolve6"
-    },
-    "resolveCname": {
-      "fn": "output = [dns, 'resolveCname', input.domain]\n",
-      "ns": "dns",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -127,15 +106,14 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
+      "ns": "dns"
+    },
+    {
+      "name": "resolveCname",
       "description": "dns resolveCname",
-      "name": "resolveCname"
-    },
-    "resolveMx": {
-      "fn": "output = [dns, 'resolveMx', input.domain]\n",
-      "ns": "dns",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -148,15 +126,14 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
+      "ns": "dns"
+    },
+    {
+      "name": "resolveMx",
       "description": "dns resolveMx",
-      "name": "resolveMx"
-    },
-    "resolveNs": {
-      "fn": "output = [dns, 'resolveNs', input.domain]\n",
-      "ns": "dns",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -169,15 +146,14 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
+      "ns": "dns"
+    },
+    {
+      "name": "resolveNs",
       "description": "dns resolveNs",
-      "name": "resolveNs"
-    },
-    "resolveSrv": {
-      "fn": "output = [dns, 'resolveSrv', input.domain]\n",
-      "ns": "dns",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -190,15 +166,14 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
+      "ns": "dns"
+    },
+    {
+      "name": "resolveSrv",
       "description": "dns resolveSrv",
-      "name": "resolveSrv"
-    },
-    "resolveTxt": {
-      "fn": "output = [dns, 'resolveTxt', input.domain]\n",
-      "ns": "dns",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -211,15 +186,34 @@
           }
         }
       },
+      "ns": "dns"
+    },
+    {
+      "name": "resolveTxt",
+      "description": "dns resolveTxt",
       "dependencies": {
         "dns": "latest"
       },
-      "description": "dns resolveTxt",
-      "name": "resolveTxt"
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "results": {
+            "type": "object"
+          }
+        }
+      },
+      "ns": "dns"
     },
-    "reverse": {
-      "fn": "output = [dns, 'reverse', input.ip]\n",
-      "ns": "dns",
+    {
+      "name": "reverse",
+      "description": "dns reverse",
+      "dependencies": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "ip": {
@@ -232,13 +226,9 @@
           }
         }
       },
-      "dependencies": {
-        "dns": "latest"
-      },
-      "description": "dns reverse",
-      "name": "reverse"
+      "ns": "dns"
     }
-  },
+  ],
   "twigs": {
     "ns": "dns"
   }
