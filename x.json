@@ -15,6 +15,7 @@
   "nodes": {
     "lookup": {
       "fn": "output = [dns, 'lookup', input.domain, input.family]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -38,6 +39,7 @@
     },
     "resolve": {
       "fn": "output = [dns, 'resolve', input.domain, input.rrtype]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -70,6 +72,7 @@
     },
     "resolve4": {
       "fn": "output = [dns, 'resolve4', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -90,6 +93,7 @@
     },
     "resolve6": {
       "fn": "output = [dns, 'resolve6', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -110,6 +114,7 @@
     },
     "resolveCname": {
       "fn": "output = [dns, 'resolveCname', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -130,6 +135,7 @@
     },
     "resolveMx": {
       "fn": "output = [dns, 'resolveMx', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -150,6 +156,7 @@
     },
     "resolveNs": {
       "fn": "output = [dns, 'resolveNs', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -170,6 +177,7 @@
     },
     "resolveSrv": {
       "fn": "output = [dns, 'resolveSrv', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -190,6 +198,7 @@
     },
     "resolveTxt": {
       "fn": "output = [dns, 'resolveTxt', input.domain]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "domain": {
@@ -210,6 +219,7 @@
     },
     "reverse": {
       "fn": "output = [dns, 'reverse', input.ip]\n",
+      "ns": "dns",
       "ports": {
         "input": {
           "ip": {
