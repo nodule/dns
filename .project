@@ -3,9 +3,16 @@
 	<name>chix-dns</name>
 	<comment></comment>
 	<projects>
+		<project>chix-flow</project>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>com.boothen.jsonedit.validation.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.boothen.jsonedit.validation.nature</nature>
 	</natures>
 </projectDescription>
