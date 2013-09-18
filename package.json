@@ -18,5 +18,8 @@
   },
   "main": "x",
   "scripts": {
+  },
+  "chix": {
+	"name": "dns"
   }
 }
