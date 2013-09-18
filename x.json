@@ -229,5 +229,7 @@
       "name": "reverse"
     }
   },
-  "twigs": {}
+  "twigs": {
+    "name": "dns"
+  }
 }
