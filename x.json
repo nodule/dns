@@ -1,7 +1,7 @@
 {
   "name": "dns",
   "description": "DNS components for Chiχ",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "licences": [
     {
       "type": "MIT",
