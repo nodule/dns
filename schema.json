@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "title": "error",
+  "properties": {
+    "code": {
+      "type": "string",
+      "title": "Error code",
+      "description": "On error, err is an Error object, where err.code is the error code. Keep in mind that err.code will be set to 'ENOENT' not only when the domain does not exist but also when the lookup fails in other ways such as no available file descriptors."
+    }
+  }
+}
