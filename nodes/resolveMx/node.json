@@ -1,7 +1,7 @@
 {
   "name": "resolveMx",
   "description": "dns resolveMx",
-  "dependencies": {
+  "require": {
     "dns": "latest"
   },
   "ports": {

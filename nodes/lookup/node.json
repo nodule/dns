@@ -1,7 +1,7 @@
 {
   "name": "lookup",
   "description": "Resolves a domain (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record.",
-  "dependencies": {
+  "require": {
     "dns": "latest"
   },
   "ports": {

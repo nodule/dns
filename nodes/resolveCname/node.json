@@ -1,7 +1,7 @@
 {
   "name": "resolveCname",
   "description": "dns resolveCname",
-  "dependencies": {
+  "require": {
     "dns": "latest"
   },
   "ports": {

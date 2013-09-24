@@ -1,7 +1,7 @@
 {
   "name": "resolve6",
   "description": "dns resolve6",
-  "dependencies": {
+  "require": {
     "dns": "latest"
   },
   "ports": {

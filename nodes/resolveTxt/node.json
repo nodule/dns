@@ -1,7 +1,7 @@
 {
   "name": "resolveTxt",
   "description": "dns resolveTxt",
-  "dependencies": {
+  "require": {
     "dns": "latest"
   },
   "ports": {
