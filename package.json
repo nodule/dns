@@ -1,23 +1,23 @@
 {
-  "name": "chix-dns",
+  "name": "nodule-dns",
   "description": "DNS components for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
   "version": "0.0.3",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/psichi/chix/raw/master/LICENSE"
-    }
-  ],
+  "licenses": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psichi/chix-dns.git"
+    "url": "https://github.com/nodule/dns.git"
   },
   "engines": {
     "node": ">=0.6.0"
   },
   "main": "x",
-  "scripts": {},
+  "devDependencies": {
+    "chit": "0.x.x"
+  },
+  "scripts": {
+    "test": "chit"
+  },
   "chix": {
     "name": "dns",
     "description": "All methods in the dns module use C-Ares except for dns.lookup which uses getaddrinfo(3) in a thread pool. C-Ares is much faster than getaddrinfo but the system resolver is more constant with how other programs operate. When a user does net.connect(80, 'google.com') or http.get({ host: 'google.com' }) the dns.lookup method is used. Users who need to do a large number of lookups quickly should use the methods that go through C-Ares."
