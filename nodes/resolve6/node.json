@@ -1,5 +1,6 @@
 {
   "name": "resolve6",
+  "ns": "dns",
   "description": "dns resolve6",
   "require": {
     "dns": "latest"

@@ -1,5 +1,6 @@
 {
   "name": "resolveSrv",
+  "ns": "dns",
   "description": "dns resolveSrv",
   "require": {
     "dns": "latest"

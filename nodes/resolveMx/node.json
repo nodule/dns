@@ -1,5 +1,6 @@
 {
   "name": "resolveMx",
+  "ns": "dns",
   "description": "dns resolveMx",
   "require": {
     "dns": "latest"

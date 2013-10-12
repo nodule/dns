@@ -1,5 +1,6 @@
 {
   "name": "resolve4",
+  "ns": "dns",
   "description": "Resolves a domain (e.g. 'google.com') into an array of the record types specified by rrtype.",
   "require": {
     "dns": "latest"

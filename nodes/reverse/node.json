@@ -1,5 +1,6 @@
 {
   "name": "reverse",
+  "ns": "dns",
   "description": "dns reverse",
   "require": {
     "dns": "latest"

@@ -1,5 +1,6 @@
 {
   "name": "resolveTxt",
+  "ns": "dns",
   "description": "dns resolveTxt",
   "require": {
     "dns": "latest"

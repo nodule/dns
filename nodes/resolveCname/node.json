@@ -1,5 +1,6 @@
 {
   "name": "resolveCname",
+  "ns": "dns",
   "description": "dns resolveCname",
   "require": {
     "dns": "latest"
