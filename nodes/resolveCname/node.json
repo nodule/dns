@@ -2,6 +2,9 @@
   "name": "resolveCname",
   "ns": "dns",
   "description": "dns resolveCname",
+  "phrases": {
+    "active": "Resolving Canonical Name Record for {{input.domain}}"
+  },
   "require": {
     "dns": "latest"
   },

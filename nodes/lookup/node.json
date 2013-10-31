@@ -2,6 +2,9 @@
   "name": "lookup",
   "ns": "dns",
   "description": "Resolves a domain (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record.",
+  "phrases": {
+    "active": "Looking up domain name {{input.domain}}"
+  },
   "require": {
     "dns": "latest"
   },

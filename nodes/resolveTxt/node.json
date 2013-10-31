@@ -2,6 +2,9 @@
   "name": "resolveTxt",
   "ns": "dns",
   "description": "dns resolveTxt",
+  "phrases": {
+    "active": "Resolving Text record for {{input.domain}}"
+  },
   "require": {
     "dns": "latest"
   },

@@ -2,6 +2,9 @@
   "name": "resolve6",
   "ns": "dns",
   "description": "dns resolve6",
+  "phrases": {
+    "active": "Resolving {{input.domain}}"
+  },
   "require": {
     "dns": "latest"
   },

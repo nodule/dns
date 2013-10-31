@@ -2,6 +2,9 @@
   "name": "reverse",
   "ns": "dns",
   "description": "dns reverse",
+  "phrases": {
+    "active": "Performing reverse lookup for {{input.ip}}"
+  },
   "require": {
     "dns": "latest"
   },

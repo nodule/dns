@@ -2,6 +2,9 @@
   "name": "resolveMx",
   "ns": "dns",
   "description": "dns resolveMx",
+  "phrases": {
+    "active": "Resolving Mail Exchanger Record for {{input.domain}}"
+  },
   "require": {
     "dns": "latest"
   },

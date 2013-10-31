@@ -2,6 +2,9 @@
   "name": "resolveSrv",
   "ns": "dns",
   "description": "dns resolveSrv",
+  "phrases": {
+    "active": "Resolving Service record for {{input.domain}}"
+  },
   "require": {
     "dns": "latest"
   },
