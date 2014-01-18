@@ -8,6 +8,15 @@
   },
   "nodes": [
     {
+      "name": "lookup",
+      "ns": "dns",
+      "description": "Resolves a domain (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record.",
+      "phrases": {
+        "active": "Looking up domain name {{input.domain}}"
+      },
+      "require": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -28,8 +37,9 @@
           }
         },
         "output": {
-          "err": {
-            "$ref": "../../schema.json#/err"
+          "error": {
+            "title": "error",
+            "type": "object"
           },
           "address": {
             "type": "string",
@@ -50,58 +60,58 @@
           }
         }
       },
-      "require": {
-        "dns": "latest"
-      },
-      "phrases": {
-        "active": "Looking up domain name {{input.domain}}"
-      },
-      "description": "Resolves a domain (e.g. 'google.com') into the first found A (IPv4) or AAAA (IPv6) record.",
-      "ns": "dns",
-      "name": "lookup",
       "fn": "output = [dns, 'lookup', input.domain, input.family]\n"
     },
     {
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string",
-            "format": "host",
-            "title": "Domain"
-          },
-          "rrtype": {
-            "enum": [
-              "A",
-              "AAAA",
-              "CNAME",
-              "MX",
-              "NS",
-              "PTR",
-              "SRV",
-              "TXT"
-            ],
-            "title": "Resource Record Type",
-            "description": "DNS record types stored in the zone files of the Domain Name System (DNS)"
-          }
-        },
-        "output": {
-          "err": {
-            "$ref": "../../schema.json#/err"
-          }
-        }
-      },
-      "require": {
-        "dns": "latest"
-      },
+      "name": "resolve",
+      "ns": "dns",
+      "description": "Resolves a domain (e.g. 'google.com') into an array of the record types specified by rrtype.",
       "phrases": {
         "active": "Resolving {{input.rrtype} for {{input.domain}}"
       },
-      "description": "Resolves a domain (e.g. 'google.com') into an array of the record types specified by rrtype.",
-      "ns": "dns",
-      "name": "resolve",
+      "require": {
+        "dns": "latest"
+      },
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string",
+            "format": "host",
+            "title": "Domain"
+          },
+          "rrtype": {
+            "enum": [
+              "A",
+              "AAAA",
+              "CNAME",
+              "MX",
+              "NS",
+              "PTR",
+              "SRV",
+              "TXT"
+            ],
+            "title": "Resource Record Type",
+            "description": "DNS record types stored in the zone files of the Domain Name System (DNS)"
+          }
+        },
+        "output": {
+          "error": {
+            "type": "object"
+          }
+        }
+      },
       "fn": "output = [dns, 'resolve', input.domain, input.rrtype]\n"
     },
     {
+      "name": "resolve4",
+      "ns": "dns",
+      "description": "Resolves a domain (e.g. 'google.com') into an array of the record types specified by rrtype.",
+      "phrases": {
+        "active": "Resolving {{input.rrtype}}  for {{input.domain}}"
+      },
+      "require": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -130,138 +140,114 @@
           }
         }
       },
-      "require": {
-        "dns": "latest"
-      },
-      "phrases": {
-        "active": "Resolving {{input.rrtype}}  for {{input.domain}}"
-      },
-      "description": "Resolves a domain (e.g. 'google.com') into an array of the record types specified by rrtype.",
-      "ns": "dns",
-      "name": "resolve4",
       "fn": "output = [dns, 'resolve4', input.domain]\n"
     },
     {
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "results": {
-            "type": "object"
-          }
-        }
-      },
-      "require": {
-        "dns": "latest"
-      },
+      "name": "resolve6",
+      "ns": "dns",
+      "description": "dns resolve6",
       "phrases": {
         "active": "Resolving {{input.domain}}"
       },
-      "description": "dns resolve6",
-      "ns": "dns",
-      "name": "resolve6",
+      "require": {
+        "dns": "latest"
+      },
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "results": {
+            "type": "object"
+          }
+        }
+      },
       "fn": "output = [dns, 'resolve6', input.domain]\n"
     },
     {
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "results": {
-            "type": "object"
-          }
-        }
-      },
-      "require": {
-        "dns": "latest"
-      },
+      "name": "resolveCname",
+      "ns": "dns",
+      "description": "dns resolveCname",
       "phrases": {
         "active": "Resolving Canonical Name Record for {{input.domain}}"
       },
-      "description": "dns resolveCname",
-      "ns": "dns",
-      "name": "resolveCname",
+      "require": {
+        "dns": "latest"
+      },
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "results": {
+            "type": "object"
+          }
+        }
+      },
       "fn": "output = [dns, 'resolveCname', input.domain]\n"
     },
     {
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "results": {
-            "type": "object"
-          }
-        }
-      },
-      "require": {
-        "dns": "latest"
-      },
+      "name": "resolveMx",
+      "ns": "dns",
+      "description": "dns resolveMx",
       "phrases": {
         "active": "Resolving Mail Exchanger Record for {{input.domain}}"
       },
-      "description": "dns resolveMx",
-      "ns": "dns",
-      "name": "resolveMx",
+      "require": {
+        "dns": "latest"
+      },
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "results": {
+            "type": "object"
+          }
+        }
+      },
       "fn": "output = [dns, 'resolveMx', input.domain]\n"
     },
     {
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "results": {
-            "type": "object"
-          }
-        }
-      },
-      "require": {
-        "dns": "latest"
-      },
+      "name": "resolveNs",
+      "ns": "dns",
+      "description": "dns resolveNs",
       "phrases": {
         "active": "Resolving nameserver record for {{input.domain}}"
       },
-      "description": "dns resolveNs",
-      "ns": "dns",
-      "name": "resolveNs",
+      "require": {
+        "dns": "latest"
+      },
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "results": {
+            "type": "object"
+          }
+        }
+      },
       "fn": "output = [dns, 'resolveNs', input.domain]\n"
     },
     {
-      "ports": {
-        "input": {
-          "domain": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "results": {
-            "type": "object"
-          }
-        }
-      },
-      "require": {
-        "dns": "latest"
-      },
+      "name": "resolveSrv",
+      "ns": "dns",
+      "description": "dns resolveSrv",
       "phrases": {
         "active": "Resolving Service record for {{input.domain}}"
       },
-      "description": "dns resolveSrv",
-      "ns": "dns",
-      "name": "resolveSrv",
-      "fn": "output = [dns, 'resolveSrv', input.domain]\n"
-    },
-    {
+      "require": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "domain": {
@@ -274,18 +260,42 @@
           }
         }
       },
-      "require": {
-        "dns": "latest"
-      },
+      "fn": "output = [dns, 'resolveSrv', input.domain]\n"
+    },
+    {
+      "name": "resolveTxt",
+      "ns": "dns",
+      "description": "dns resolveTxt",
       "phrases": {
         "active": "Resolving Text record for {{input.domain}}"
       },
-      "description": "dns resolveTxt",
-      "ns": "dns",
-      "name": "resolveTxt",
+      "require": {
+        "dns": "latest"
+      },
+      "ports": {
+        "input": {
+          "domain": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "results": {
+            "type": "object"
+          }
+        }
+      },
       "fn": "output = [dns, 'resolveTxt', input.domain]\n"
     },
     {
+      "name": "reverse",
+      "ns": "dns",
+      "description": "dns reverse",
+      "phrases": {
+        "active": "Performing reverse lookup for {{input.ip}}"
+      },
+      "require": {
+        "dns": "latest"
+      },
       "ports": {
         "input": {
           "ip": {
@@ -298,15 +308,6 @@
           }
         }
       },
-      "require": {
-        "dns": "latest"
-      },
-      "phrases": {
-        "active": "Performing reverse lookup for {{input.ip}}"
-      },
-      "description": "dns reverse",
-      "ns": "dns",
-      "name": "reverse",
       "fn": "output = [dns, 'reverse', input.ip]\n"
     }
   ],

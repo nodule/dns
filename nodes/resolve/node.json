@@ -22,7 +22,9 @@
       }
     },
     "output": {
-      "err": { "$ref": "../../schema.json#/err" }
+      "error": {
+        "type": "object"
+      }
     }
   }
 }

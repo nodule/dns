@@ -25,7 +25,10 @@
       }
     },
     "output": {
-      "err": { "$ref": "../../schema.json#/err" },
+      "error": {
+        "title": "error",
+        "type": "object"
+      },
       "address": {
         "type": "string",
         "format": ["ipv4", "ipv6"],
