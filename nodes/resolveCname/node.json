@@ -1,6 +1,7 @@
 {
   "name": "resolveCname",
   "ns": "dns",
+  "title": "Resolve Cname",
   "description": "dns resolveCname",
   "phrases": {
     "active": "Resolving Canonical Name Record for {{input.domain}}"

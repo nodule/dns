@@ -1,6 +1,7 @@
 {
   "name": "resolveTxt",
   "ns": "dns",
+  "title": "Resolve TXT",
   "description": "dns resolveTxt",
   "phrases": {
     "active": "Resolving Text record for {{input.domain}}"

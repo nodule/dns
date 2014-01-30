@@ -1,6 +1,7 @@
 {
   "name": "resolveMx",
   "ns": "dns",
+  "title": "Resolve Mx",
   "description": "dns resolveMx",
   "phrases": {
     "active": "Resolving Mail Exchanger Record for {{input.domain}}"

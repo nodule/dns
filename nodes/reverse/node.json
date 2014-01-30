@@ -1,6 +1,7 @@
 {
   "name": "reverse",
   "ns": "dns",
+  "title": "Reverse",
   "description": "dns reverse",
   "phrases": {
     "active": "Performing reverse lookup for {{input.ip}}"

@@ -1,6 +1,7 @@
 {
   "name": "resolveSrv",
   "ns": "dns",
+  "title": "Resolve Srv",
   "description": "dns resolveSrv",
   "phrases": {
     "active": "Resolving Service record for {{input.domain}}"

@@ -1,6 +1,7 @@
 {
   "name": "resolve6",
   "ns": "dns",
+  "title": "Resolve6",
   "description": "dns resolve6",
   "phrases": {
     "active": "Resolving {{input.domain}}"
