@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Resolving {{input.rrtype}}  for {{input.domain}}"
   },
-  "require": {
-    "dns": "latest"
-  },
   "ports": {
     "input": {
       "domain": {
@@ -17,7 +14,16 @@
         "title": "Domain"
       },
       "rrtype": {
-        "enum": ["A","AAAA", "CNAME", "MX", "NS", "PTR", "SRV", "TXT"],
+        "enum": [
+          "A",
+          "AAAA",
+          "CNAME",
+          "MX",
+          "NS",
+          "PTR",
+          "SRV",
+          "TXT"
+        ],
         "title": "Resource Record Type",
         "description": "DNS record types stored in the zone files of the Domain Name System (DNS)"
       }
@@ -26,6 +32,11 @@
       "results": {
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "dns": "latest"
     }
   }
 }

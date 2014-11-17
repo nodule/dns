@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Resolving Service record for {{input.domain}}"
   },
-  "require": {
-    "dns": "latest"
-  },
   "ports": {
     "input": {
       "domain": {
@@ -19,6 +16,11 @@
       "results": {
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "dns": "latest"
     }
   }
 }

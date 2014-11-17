@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Looking up domain name {{input.domain}}"
   },
-  "require": {
-    "dns": "latest"
-  },
   "ports": {
     "input": {
       "domain": {
@@ -18,7 +15,10 @@
         "description": "e.g. 'google.com'"
       },
       "family": {
-        "enum": [4, 6],
+        "enum": [
+          4,
+          6
+        ],
         "title": "Family",
         "description": "The family can be the integer 4 or 6. Defaults to null that indicates both Ip v4 and v6 address family.",
         "default": null,
@@ -32,15 +32,26 @@
       },
       "address": {
         "type": "string",
-        "format": ["ipv4", "ipv6"],
+        "format": [
+          "ipv4",
+          "ipv6"
+        ],
         "title": "Address",
         "description": "The address is a string representation of a IP v4 or v6 address"
       },
       "family": {
-        "enum": [4, 6],
+        "enum": [
+          4,
+          6
+        ],
         "title": "Family",
         "description": "Denotes the family of the address"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "dns": "latest"
     }
   }
 }
