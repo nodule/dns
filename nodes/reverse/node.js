@@ -1,1 +1,1 @@
-output = [dns, 'reverse', input.ip]
+output = [dns, 'reverse', $.ip]

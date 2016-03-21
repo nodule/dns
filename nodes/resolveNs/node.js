@@ -1,1 +1,1 @@
-output = [dns, 'resolveNs', input.domain]
+output = [dns, 'resolveNs', $.domain]
