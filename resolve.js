@@ -38,9 +38,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function resolve(input, output, state, done, cb, on, dns) {
+  fn: function resolve(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.resolve(input.domain, input.rrtype, function resolveCallback(error) {
+      dns.resolve($.domain, $.rrtype, function resolveCallback(error) {
         cb({
           error: error
         });

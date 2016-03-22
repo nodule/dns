@@ -51,9 +51,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function lookup(input, output, state, done, cb, on, dns) {
+  fn: function lookup(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.lookup(input.domain, input.family, function lookupCallback(error, address, family) {
+      dns.lookup($.domain, $.family, function lookupCallback(error, address, family) {
         cb({
           error: error,
           address: address,

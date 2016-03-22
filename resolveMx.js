@@ -23,9 +23,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function resolveMx(input, output, state, done, cb, on, dns) {
+  fn: function resolveMx(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.resolveMx(input.domain, function resolveMxCallback(results) {
+      dns.resolveMx($.domain, function resolveMxCallback(results) {
         cb({
           results: results
         });

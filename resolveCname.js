@@ -23,9 +23,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function resolveCname(input, output, state, done, cb, on, dns) {
+  fn: function resolveCname(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.resolveCname(input.domain, function resolveCnameCallback(results) {
+      dns.resolveCname($.domain, function resolveCnameCallback(results) {
         cb({
           results: results
         });

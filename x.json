@@ -63,7 +63,7 @@
       "title": "Lookup",
       "ns": "dns",
       "name": "lookup",
-      "fn": "output = [dns, 'lookup', input.domain, input.family]\n"
+      "fn": "output = [dns, 'lookup', $.domain, $.family]\n"
     },
     {
       "dependencies": {
@@ -106,7 +106,7 @@
       "title": "Resolve",
       "ns": "dns",
       "name": "resolve",
-      "fn": "output = [dns, 'resolve', input.domain, input.rrtype]\n"
+      "fn": "output = [dns, 'resolve', $.domain, $.rrtype]\n"
     },
     {
       "dependencies": {
@@ -149,7 +149,7 @@
       "title": "Resolve4",
       "ns": "dns",
       "name": "resolve4",
-      "fn": "output = [dns, 'resolve4', input.domain]\n"
+      "fn": "output = [dns, 'resolve4', $.domain]\n"
     },
     {
       "dependencies": {
@@ -176,7 +176,7 @@
       "title": "Resolve6",
       "ns": "dns",
       "name": "resolve6",
-      "fn": "output = [dns, 'resolve6', input.domain]\n"
+      "fn": "output = [dns, 'resolve6', $.domain]\n"
     },
     {
       "dependencies": {
@@ -203,7 +203,7 @@
       "title": "Resolve Cname",
       "ns": "dns",
       "name": "resolveCname",
-      "fn": "output = [dns, 'resolveCname', input.domain]\n"
+      "fn": "output = [dns, 'resolveCname', $.domain]\n"
     },
     {
       "dependencies": {
@@ -230,7 +230,7 @@
       "title": "Resolve Mx",
       "ns": "dns",
       "name": "resolveMx",
-      "fn": "output = [dns, 'resolveMx', input.domain]\n"
+      "fn": "output = [dns, 'resolveMx', $.domain]\n"
     },
     {
       "dependencies": {
@@ -257,7 +257,7 @@
       "title": "Resolve NS",
       "ns": "dns",
       "name": "resolveNs",
-      "fn": "output = [dns, 'resolveNs', input.domain]\n"
+      "fn": "output = [dns, 'resolveNs', $.domain]\n"
     },
     {
       "dependencies": {
@@ -284,7 +284,7 @@
       "title": "Resolve Srv",
       "ns": "dns",
       "name": "resolveSrv",
-      "fn": "output = [dns, 'resolveSrv', input.domain]\n"
+      "fn": "output = [dns, 'resolveSrv', $.domain]\n"
     },
     {
       "dependencies": {
@@ -311,7 +311,7 @@
       "title": "Resolve TXT",
       "ns": "dns",
       "name": "resolveTxt",
-      "fn": "output = [dns, 'resolveTxt', input.domain]\n"
+      "fn": "output = [dns, 'resolveTxt', $.domain]\n"
     },
     {
       "dependencies": {
@@ -338,7 +338,7 @@
       "title": "Reverse",
       "ns": "dns",
       "name": "reverse",
-      "fn": "output = [dns, 'reverse', input.ip]\n"
+      "fn": "output = [dns, 'reverse', $.ip]\n"
     }
   ],
   "twigs": []

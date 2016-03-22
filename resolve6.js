@@ -23,9 +23,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function resolve6(input, output, state, done, cb, on, dns) {
+  fn: function resolve6(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.resolve6(input.domain, function resolve6Callback(results) {
+      dns.resolve6($.domain, function resolve6Callback(results) {
         cb({
           results: results
         });

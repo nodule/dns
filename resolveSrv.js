@@ -23,9 +23,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function resolveSrv(input, output, state, done, cb, on, dns) {
+  fn: function resolveSrv(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.resolveSrv(input.domain, function resolveSrvCallback(results) {
+      dns.resolveSrv($.domain, function resolveSrvCallback(results) {
         cb({
           results: results
         });

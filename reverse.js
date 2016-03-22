@@ -23,9 +23,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function reverse(input, output, state, done, cb, on, dns) {
+  fn: function reverse(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.reverse(input.ip, function reverseCallback(results) {
+      dns.reverse($.ip, function reverseCallback(results) {
         cb({
           results: results
         });

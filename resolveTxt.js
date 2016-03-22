@@ -23,9 +23,9 @@ module.exports = {
       dns: require('dns')
     }
   },
-  fn: function resolveTxt(input, output, state, done, cb, on, dns) {
+  fn: function resolveTxt(input, $, output, state, done, cb, on, dns) {
     var r = function() {
-      dns.resolveTxt(input.domain, function resolveTxtCallback(results) {
+      dns.resolveTxt($.domain, function resolveTxtCallback(results) {
         cb({
           results: results
         });
